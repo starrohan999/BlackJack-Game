@@ -29,7 +29,17 @@ function renderGame() {
     } else if (sum === 21) {
         let snd=new Audio("win.mp3");
         snd.play();
+        const jsConfetti = new JSConfetti()
+        jsConfetti.addConfetti(
+            {
+                
+                confettiRadius: 10,
+                confettiNumber: 500,
+                  
+            }
+        )
         message = "You've got Blackjack!"
+
         hasBlackJack = true
     } else {
         let snd=new Audio("loose.mp3");
